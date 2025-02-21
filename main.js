@@ -26,6 +26,21 @@ const bici = [
   },
 ];
 
+let minPeso = bici[0].peso;
+let biciLeggera = bici[0];
+
+for (let i = 1; i < bici.length; i++) {
+  minPeso = Math.min(minPeso, bici[i].peso);
+}
+
+for (let i = 0; i < bici.length; i++) {
+  if (bici[i].peso === minPeso) {
+    biciLeggera = bici[i];
+    break;
+  }
+}
+console.log(biciLeggera);
+
 // Snack2
 // Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
